@@ -5,7 +5,6 @@
   text-align: left;
   margin: 0 auto;
   border-collapse: collapse;
-  // position: relative;
 
   &__icon-column {
     width: 5%;
@@ -32,7 +31,7 @@
   &__container {
     background-color: #181616;
     width: 100%;
-    // position: relative;
+ 
   }
 
   &__header-text {
@@ -63,16 +62,6 @@
     font-size: 1rem;
   }
 
-  // & th {
-  //   // position: sticky;
-  // }
-
-  // & thead {
-  //   position: absolute;
-  //   top: 100px;
-  //   width: calc((100% - 436px)*0.95);
-  //   display: flex;
-  // }
 
   &__row-icon {
     width: 20px;

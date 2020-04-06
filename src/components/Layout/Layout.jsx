@@ -6,13 +6,13 @@ import Footer from './../Footer/Footer';
 // import NewPlayList from './../NewPlayList/NewPlayList';
 import MainContent from '../MainContent/MainContent';
 
-const Layout = () => {
+const Layout = (props) => {
   return (
     <div className="layout">
       <Footer></Footer>
       <SideNav></SideNav>
       <FriendsMusic></FriendsMusic>
-      <MainContent></MainContent>
+      <MainContent {...props}></MainContent>
       {/* <NewPlayList></NewPlayList> */}
     </div>
   );
