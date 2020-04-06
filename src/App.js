@@ -10,6 +10,7 @@ import {
 
 import Layout from './components/Layout/Layout';
 
+
 function App() {
   return (
 
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Layout></Layout>
+          </Route>
+          <Route  path="/haut">
+          <Layout component= "searchList"></Layout>
           </Route>
           <Route exact path="/">
             <Layout></Layout>

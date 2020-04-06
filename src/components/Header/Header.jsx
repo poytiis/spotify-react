@@ -9,6 +9,7 @@ import heart from '../../icons/heart-circular.png';
 import more from '../../icons/dots-more-circular.png';
 
 import Button from '../Button/Button';
+import { useHistory } from "react-router-dom";
 
 const inputIconStyle =  {
   backgroundImage: `url(${search})`,
@@ -16,7 +17,16 @@ const inputIconStyle =  {
 
 const Header = (props) => {
 
-//  + props.scrolled ? "header__fixed--black" : null
+  let history = useHistory();
+
+  function handleSearchFocus() {
+    console.log('sdlkjsfd');
+    const url = window.location.pathname;
+
+    if (url !== "haut") {
+      history.push('/haut');
+    }
+  }
 
   const headerClass = props.scrolled ? "header__fixed--black" : "";
   console.log(headerClass)
@@ -25,7 +35,7 @@ const Header = (props) => {
     <div className="header--large">
 
       <div className={"flex-row-center header__fixed  " + headerClass}>
-        <input style={inputIconStyle} className="header__input" type="text" placeholder="Hae"/>
+        <input style={inputIconStyle} className="header__input" type="text" placeholder="Hae" onFocus={handleSearchFocus} />
 
         <div className="header__user-container flex-row-center">
           <img className="header__user-icon" src={user} alt="user"/>

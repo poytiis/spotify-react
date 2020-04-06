@@ -8,6 +8,8 @@
   overflow: auto; 
   background-color: rgba(0,0,0,0.7);
   justify-content: center;
+  opacity: 0;
+  transition:  opacity 0.6s;
 
   &__content {
     width: 620px;

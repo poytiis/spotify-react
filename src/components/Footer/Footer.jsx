@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Footer.scss';
 
 import songImage from '../../icons/test.jpg'
@@ -13,7 +13,19 @@ import queque from '../../icons/queque.png';
 import speaker from '../../icons/speaker.png';
 import volume from '../../icons/volume.png';
 import expand from '../../icons/expand.png';
+
+import Devices from '../Devices/Devices';
+
 const Footer = () => {
+
+  const [showDevices, setShowDevices] = useState(false);
+
+  function closeDevices() {
+    setShowDevices(false);
+  }
+  function openDevices () {
+    setShowDevices(true);
+  }
   return (
     <div className="footer flex-row-center">
 
@@ -48,7 +60,12 @@ const Footer = () => {
 
      <div className="flex-row-center footer__right-container">
        <img className="footer__icon" src={queque} alt="queque"/>
-       <img className="footer__icon" src={speaker} alt="devices"/>
+       <div className="footer__devices-container">
+          <img className="footer__icon" onClick={openDevices} src={speaker} alt="devices"/>
+          {showDevices ? <Devices close={closeDevices}></Devices> : null}
+          
+       </div>
+       
        <img className="footer__icon" src={volume} alt="volume"/>
        <span className="footer__volume-bar"></span>
        <img  className="footer__icon" src={expand} alt="expand"/>

@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Table from '../Table/Table';
 import {useState, useRef}  from 'react';
 import GridView from '../GridView/GridView';
+import SearchList from '../SearchList/SearchList';
 
 const MainContent = (props) => {
 
@@ -15,7 +16,15 @@ const MainContent = (props) => {
 
   const headerType = showLargeHeader ? 'large' : 'small';
 
-  const mainContent = props.component === 'lastPlayed' ? <GridView></GridView> : <Table header={headerType}></Table>;
+  let mainContent = '';
+  if(props.component === 'lastPlayed') {
+    mainContent = <GridView></GridView>;
+  } else if (props.component === 'searchList') {
+    mainContent = <SearchList></SearchList>;
+  } else {
+    mainContent = <Table header={headerType}></Table>;
+  }
+
 
 
   function handleScroll (e) {
