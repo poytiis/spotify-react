@@ -11,6 +11,7 @@ import more from '../../icons/dots-more-circular.png';
 import Button from '../Button/Button';
 import { useHistory } from "react-router-dom";
 
+
 const inputIconStyle =  {
   backgroundImage: `url(${search})`,
 }
@@ -40,7 +41,17 @@ const Header = (props) => {
         <div className="header__user-container flex-row-center">
           <img className="header__user-icon" src={user} alt="user"/>
           <span className="header__text header__username">Teemu Pöytäniemi</span>
-          <img src={arrow} alt="arrow"/>
+          <div className="header__dropdown-container">
+            <img src={arrow} alt="arrow"/>
+            <div className="header__dropdown flex-column">
+              
+              <span className="header__text--dropdown">Yksityinen istunto</span>
+              <span className="header__text--dropdown">Tili</span>
+              <span className="header__text--dropdown">Asetukset</span>
+              <span className="header__text--dropdown">Kirjaudu ulos</span>
+
+            </div>
+          </div>
         </div>
       </div>
 
@@ -77,7 +88,18 @@ const Header = (props) => {
         <div className="header__user-container flex-row-center">
           <img className="header__user-icon" src={user} alt="user"/>
           <span className="header__text header__username">Teemu Pöytäniemi</span>
-          <img src={arrow} alt="arrow"/>
+          <div className="header__dropdown-container">
+            <img src={arrow} alt="arrow"/>
+            <div className="header__dropdown flex-column">
+
+              <span className="header__text--dropdown">Yksityinen istunto</span>
+              <span className="header__text--dropdown">Tili</span>
+              <span className="header__text--dropdown">Asetukset</span>
+              <span className="header__text--dropdown">Kirjaudu ulos</span>
+
+            </div>
+          </div>
+         
         </div>
       </div>
 

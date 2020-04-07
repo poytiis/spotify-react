@@ -8,9 +8,56 @@
     background-image: linear-gradient(#544C4C, #181616);
   }
 
+  &__dropdown {
+    position: absolute;
+    background-color: #353434;
+    width: 180px;
+    height: 160px;
+    right: 0;
+    z-index: 3000;
+    // visibility: hidden;
+    display: none;
+
+    &:hover {
+      visibility: visible;
+      display: flex;
+    }
+
+    & span:hover {
+      cursor: pointer;
+    }
+
+    
+
+    &-container {
+      position: relative;
+      z-index: 3000;
+
+      &:hover  .header__dropdown {
+        visibility: visible;
+        display: flex;
+      }
+     
+
+    }
+  }
+
   &__text {
     color: #EDEEE9;
     font-size: 0.8rem;
+
+    &--dropdown {
+      color: #EDEEE9;
+      font-size: 0.9rem;
+      padding: 0.5rem 0;
+      padding-left: 2.4rem;
+
+      &:hover {
+        color: white;
+        background-color: #464444;
+      }
+
+    }
   }
 
   & > div:first-child {
