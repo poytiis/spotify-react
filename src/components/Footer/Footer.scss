@@ -83,7 +83,8 @@
       margin-right: 1rem;
     }
 
-    &-queque-container, &-expand-container, &-volume-container, &-devices-container {
+    &-queque-container, &-expand-container, &-volume-container, &-devices-container,
+    &-next-container, &-repeat-container, &-play-container, &-back-container, &-shuffle-container {
       position: relative;
 
       &:hover .tooltip {

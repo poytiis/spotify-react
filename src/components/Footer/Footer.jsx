@@ -44,11 +44,33 @@ const Footer = () => {
 
      <div className="footer__play-container flex-column-center">
        <div className="flex-row-center footer__play-button-container">
-          <img src={shuffle} alt="shuffle"/>
-          <img src={back} alt="back"/>
-          <img className="footer__play-button" src={play} alt="play"/>
-          <img src={next} alt="next"/>
-          <img src={repeat} alt="repeat"/>
+
+         <div className="footer__icon-shuffle-container">
+            <img src={shuffle} alt="shuffle"/>
+            <Tooltip type="bottom">Satunnaistoisto</Tooltip>
+         </div>
+         
+          <div  className="footer__icon-back-container">
+            <img src={back} alt="back"/>
+            <Tooltip type="bottom">Edellinen</Tooltip>
+          </div>
+          
+
+          <div className="footer__icon-play-container">
+            <img className="footer__play-button" src={play} alt="play"/>
+            <Tooltip type="bottom">Toista</Tooltip>
+          </div>
+          
+          <div className="footer__icon-next-container">
+            <img src={next} alt="next"/>
+            <Tooltip type="bottom">Seuraava</Tooltip>
+          </div>
+          
+          <div  className="footer__icon-repeat-container">
+            <img src={repeat} alt="repeat"/>
+            <Tooltip type="bottom">Toista uudelleen</Tooltip>
+          </div>
+         
 
        </div>
 
